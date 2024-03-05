@@ -35,7 +35,7 @@ async function scrollInfinitely(page) {
             return new Promise(resolve => {
                 setTimeout(() => {
                     resolve(window.innerHeight + window.scrollY >= scrollHeight);
-                }, 1000);
+                }, 3000);
             });
         });
     }
