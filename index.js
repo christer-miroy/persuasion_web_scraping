@@ -5,11 +5,13 @@
         try {
             const browser = await puppeteer.launch();
             const page = await browser.newPage();
-            await page.goto('https://ecommerce.datablitz.com.ph/collections/pc-mac');
-           
+            await page.goto('https://ecommerce.datablitz.com.ph/collections/pc-mac?page=2&pf_t_categories=Controllers');
+
             data = await page.evaluate(() => {
                 root = Array.from(document.querySelectorAll('.product-item'));
+                id = 0;
                 products = root.map(product => ({
+                    id: ++id,
                     name: product.querySelector('.product-item__title').textContent,
                     price: product.querySelector('.money').textContent,
                     imageURL: product.querySelector('img').src
