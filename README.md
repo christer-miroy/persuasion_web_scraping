@@ -9,3 +9,7 @@ To set up the project, follow these steps:
 
 ## Running the code
 To execute the code, run `node index.js` in your terminal.
+
+## Note
+The output may be delayed because of the timeout triggered by the infinite scroll functionality.
+Please be patient. Thank you.
